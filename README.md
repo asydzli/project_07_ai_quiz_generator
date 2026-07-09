@@ -1,45 +1,58 @@
 # Project 07 - AI Quiz Generator
 
-## Deskripsi
+AI Quiz Generator adalah aplikasi Streamlit untuk membuat soal quiz berdasarkan topik, level, jenis soal, dan jumlah pertanyaan. Project ini menggunakan Google Gemini API melalui package `google-genai`.
 
-AI Quiz Generator adalah aplikasi berbasis Streamlit yang dapat mengubah dokumen pembelajaran menjadi soal latihan menggunakan Google Gemini AI.
+## Fitur
 
----
+- Input topik quiz
+- Pilihan level soal
+- Pilihan jenis soal
+- Slider jumlah soal
+- Validasi input
+- Error handling saat API gagal
+- Output quiz dengan kunci jawaban dan pembahasan
+
+## Teknologi
+
+- Python 3.13+
+- Streamlit
+- Google Gemini API (`google-genai`)
+- python-dotenv
+- VS Code
+- Virtual Environment
 
 ## Cara Menjalankan
 
-Masuk ke folder project.
+1. Buat virtual environment.
 
 ```bash
-cd project_07_ai_quiz_generator
+python -m venv venv
 ```
 
-Jalankan aplikasi.
+2. Aktifkan virtual environment.
+
+```bash
+venv\Scripts\activate
+```
+
+3. Install dependency.
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Buat file `.env` berdasarkan `.env.example`, lalu isi API key Gemini.
+
+```env
+GEMINI_API_KEY=YOUR_API_KEY
+```
+
+5. Jalankan aplikasi.
 
 ```bash
 streamlit run app.py
 ```
 
----
+## Catatan
 
-## Fitur
-
-- Upload PDF
-- Upload DOCX
-- Upload PPTX
-- Pilihan jumlah soal
-- Pilihan tingkat kesulitan
-- Pilihan jenis soal
-- Generate jawaban otomatis
-
----
-
-## Teknologi
-
-- Python
-- Streamlit
-- Google Gemini AI
-- python-dotenv
-- pypdf
-- python-docx
-- python-pptx
+Jangan upload file `.env` ke repository. File tersebut sudah masuk ke `.gitignore`.
